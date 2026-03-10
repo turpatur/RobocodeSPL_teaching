@@ -17,12 +17,11 @@ import java.awt.Color;
 public class ModuleBot extends Module {
 
 	protected void initialize() {
-		// TODO Customize the colors here
-		setBodyColor(Color.BLACK);
-		setGunColor(Color.BLACK);
-		setRadarColor(Color.BLACK);
-		setScanColor(Color.BLUE);
-		setBulletColor(Color.RED);
+		setBodyColor(Color.MAGENTA);
+		setGunColor(Color.CYAN);
+		setRadarColor(Color.YELLOW);
+		setScanColor(Color.WHITE);
+		setBulletColor(Color.GREEN);
 	}
 
 	protected void selectBehavior() {
@@ -31,6 +30,10 @@ public class ModuleBot extends Module {
 		targeting = getSelectedTargeting();
 		selectEnemy = getSelectedSelectEnemy();
 		gun = getSelectedGun();
+	}
+	
+	public void onWin(WinEvent e) {
+		turnRight(36000);
 	}
 
 }
