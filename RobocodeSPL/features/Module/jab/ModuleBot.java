@@ -8,6 +8,7 @@ import jab.radar.*;
 import jab.selectEnemy.*;
 import jab.targeting.*;
 import java.awt.Color;
+import robocode.WinEvent;
 
 /**
  * Module Bot 1.0.0
@@ -17,11 +18,11 @@ import java.awt.Color;
 public class ModuleBot extends Module {
 
 	protected void initialize() {
-		setBodyColor(Color.MAGENTA);
+		setBodyColor(Color.RED);
 		setGunColor(Color.CYAN);
 		setRadarColor(Color.YELLOW);
 		setScanColor(Color.WHITE);
-		setBulletColor(Color.GREEN);
+		setBulletColor(Color.RED);
 	}
 
 	protected void selectBehavior() {
